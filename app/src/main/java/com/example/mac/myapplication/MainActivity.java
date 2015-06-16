@@ -8,7 +8,7 @@ import android.view.MenuItem;
 
 public class MainActivity extends Activity {
 
-
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
