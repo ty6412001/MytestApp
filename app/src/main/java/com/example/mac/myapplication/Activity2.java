@@ -1,37 +1,24 @@
 package com.example.mac.myapplication;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
 
-public class MainActivity extends Activity implements View.OnClickListener {
-
-    private static final String TAG = "MainActivity";
-    private Button but = null;
+public class Activity2 extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        init();
+        setContentView(R.layout.activity_activity2);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_activity2, menu);
         return true;
-    }
-
-    private void init(){
-        but = (Button) findViewById(R.id.but);
-        but.setOnClickListener(this);
     }
 
     @Override
@@ -47,11 +34,5 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onClick(View view) {
-        Intent intent = new Intent(this,Activity2.class);
-        startActivity(intent);
     }
 }
